@@ -4,7 +4,7 @@ export type BZ2Module = EmscriptenModule & {
     dstSize: number,
     srcPtr: number,
     srcSize: number,
-    small: number
+    small: number,
   ) => { code: number; error?: string; buffer?: Uint8Array };
 };
 

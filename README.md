@@ -1,6 +1,6 @@
-# @foxglove/wasm-bz2
+# @lichtblick/wasm-bz2
 
-[![npm version](https://img.shields.io/npm/v/@foxglove/wasm-bz2)](https://www.npmjs.com/package/@foxglove/wasm-bz2)
+[![npm version](https://img.shields.io/npm/v/@lichtblick/wasm-bz2)](https://www.npmjs.com/package/@lichtblick/wasm-bz2)
 
 Bzip2 decompression compiled to WebAssembly
 
@@ -11,7 +11,7 @@ This package provides a WebAssembly build of https://gitlab.com/bzip2/bzip2, the
 ## Usage
 
 ```ts
-import Bzip2 from "@foxglove/wasm-bz2";
+import Bzip2 from "@lichtblick/wasm-bz2";
 
 const bzip2 = await Bzip2.init();
 
@@ -23,7 +23,3 @@ try {
   console.error(error);
 }
 ```
-
-## Stay in touch
-
-Join our [Slack channel](https://foxglove.dev/slack) to ask questions, share feedback, and stay up to date on what our team is working on.
