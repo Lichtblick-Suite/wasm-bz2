@@ -1,6 +1,6 @@
 extends:
-  - plugin:@foxglove/base
-  - plugin:@foxglove/jest
+  - plugin:@lichtblick/base
+  - plugin:@lichtblick/jest
 env:
   node: true
 ignorePatterns:
@@ -8,6 +8,10 @@ ignorePatterns:
 overrides:
   - files: ["*.ts", "*.tsx"]
     extends:
-      - plugin:@foxglove/typescript
+      - plugin:@lichtblick/typescript
     parserOptions:
       project: tsconfig.json
+    rules:
+     #This can be investigated in the future, since there are two files whose filenames doesn't match the exported ones
+     "filenames/match-exported": off
+

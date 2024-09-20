@@ -10,7 +10,7 @@ export default class Bzip2 {
   decompress(
     src: Uint8Array,
     destSize: number,
-    { small = false } = {}
+    { small = false } = {},
   ): Uint8Array {
     const srcBuf = this.module._malloc(src.byteLength); // eslint-disable-line no-underscore-dangle
     const dstBuf = this.module._malloc(destSize); // eslint-disable-line no-underscore-dangle
@@ -21,11 +21,11 @@ export default class Bzip2 {
         destSize,
         srcBuf,
         src.byteLength,
-        small ? 1 : 0
+        small ? 1 : 0,
       );
       if (code !== 0 || buffer == undefined) {
         throw new Error(
-          `BZ2 decompression failed: ${code} (${error ?? "unknown"})`
+          `BZ2 decompression failed: ${code} (${error ?? "unknown"})`,
         );
       }
       return new Uint8Array(buffer); // copy out of emscripten heap before freeing
