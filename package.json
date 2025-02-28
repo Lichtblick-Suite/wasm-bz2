@@ -1,6 +1,6 @@
 {
   "name": "@lichtblick/wasm-bz2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Bzip2 decompression compiled to WebAssembly",
   "license": "MIT",
   "repository": {
